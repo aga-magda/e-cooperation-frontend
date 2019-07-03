@@ -1,0 +1,37 @@
+// vue material theme
+
+@import "~vue-material/dist/theme/engine";
+
+@include md-register-theme("default", (
+        primary: #6200ee, // The primary color of your brand
+        accent: #03dac6, // The secondary color of your brand
+        theme: light
+));
+
+@include md-register-theme("default-dark", (
+        primary: #03dac6, // The primary color of your brand
+        accent: #6200ee, // The secondary color of your brand
+        theme: dark
+));
+
+@import "~vue-material/dist/theme/all";
+
+
+// bootsrap theme
+$primary: #6200ee !default;
+$theme-colors: (
+        "accent": #03dac6,
+        "grey": #545454,
+        "salmon": #F7D4BC,
+) !default;
+
+@function theme-color($key: "test1") {
+  @return map-get($theme-colors, $key);
+}
+@function theme-color($key: "test2") {
+  @return map-get($theme-colors, $key);
+}
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
